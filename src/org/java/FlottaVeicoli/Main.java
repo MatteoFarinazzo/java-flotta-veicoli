@@ -14,11 +14,15 @@ public class Main {
         flotta.addNewVeicolo(incredibile);
         Motociclette veloce = new Motociclette("HD648RT",2009, true);
         flotta.addNewVeicolo(veloce);
+
+        //provo ad aggiungere una targa già presente
         Motociclette vekhb = new Motociclette("HD648RT",2009, true);
         flotta.addNewVeicolo(vekhb);
 
+        //stampo un veicolo con specifica targa
         System.out.println(flotta.findVeicle("AR946TE"));
 
+        //conto il numero di veicoli distinti per tipologia
         System.out.println(flotta.getSpecificTypeNum());
 
 

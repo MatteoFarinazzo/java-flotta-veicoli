@@ -24,11 +24,14 @@ public class GestoreFlotta {
     //metodi
 
     public void addNewVeicolo (Veicolo nuovoVeicolo){
-        if (!listaVeicoli.contains(nuovoVeicolo.getTarga())){
-            listaVeicoli.add(nuovoVeicolo);
-        } else {
-            System.out.println("Hei! Un veicolo con questa targa è già presente!");
+
+        for (Veicolo veicolo : listaVeicoli){
+            if (veicolo.getTarga().equals(nuovoVeicolo.getTarga())){
+                System.out.println("Hey! Un veicolo con questa targa è già presente!");
+                return;
+            }
         }
+        listaVeicoli.add(nuovoVeicolo);
     }
 
     public Veicolo findVeicle (String targa){
