@@ -12,7 +12,6 @@ public abstract class Veicolo {
         this.annoImmatricolazione = annoImmatricolazione;
     }
 
-
     //getter setter
 
 
@@ -36,4 +35,8 @@ public abstract class Veicolo {
     //metodi
 
 
+    @Override
+    public String toString() {
+        return "Il veicolo con la targa inserita è: " + getTarga() + " " + getAnnoImmatricolazione();
+    }
 }

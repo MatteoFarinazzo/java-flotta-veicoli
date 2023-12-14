@@ -1,16 +1,14 @@
 package org.java.FlottaVeicoli;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GestoreFlotta {
 
-    private List <Veicolo> listaVeicoli;
+    private List <Veicolo> listaVeicoli = new ArrayList<>();
 
     //costruttore
 
-    public GestoreFlotta(List<Veicolo> listaVeicoli) {
-        this.listaVeicoli = listaVeicoli;
-    }
 
     //getter setter
 
@@ -54,7 +52,7 @@ public class GestoreFlotta {
                 counterMoto ++;
             }
         }
-        return response += "I veicoli di tipo automobile sono: " + counterAuto + ", mentre i veicoli di tipo motociclo sono: " + counterMoto;
+        return response = "I veicoli di tipo automobile sono: " + counterAuto + ", mentre i veicoli di tipo motociclo sono: " + counterMoto;
     }
 
 }

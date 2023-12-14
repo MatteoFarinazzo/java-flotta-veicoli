@@ -4,8 +4,9 @@ public class Motociclette extends Veicolo{
 
     private boolean cavalletto;
 
-    public Motociclette(String targa, int annoImmatricolazione) {
+    public Motociclette(String targa, int annoImmatricolazione, boolean cavalletto) {
         super(targa, annoImmatricolazione);
+        this.cavalletto = cavalletto;
     }
 
     //getter setter
@@ -15,7 +16,20 @@ public class Motociclette extends Veicolo{
         return cavalletto;
     }
 
+    public String haveCavalletto (){
+        String cavalle = null;
+        if (cavalletto){
+            cavalle = " Ha il cavalletto";
+        } else {cavalle = " Non ha il cavalletto";}
+        return cavalle;
+    }
+
     public void setCavalletto(boolean cavalletto) {
         this.cavalletto = cavalletto;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + haveCavalletto() ;
     }
 }

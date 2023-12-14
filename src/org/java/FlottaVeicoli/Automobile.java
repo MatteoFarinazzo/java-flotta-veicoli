@@ -16,4 +16,9 @@ public class Automobile extends Veicolo{
     public void setNumPorte(int numPorte) {
         this.numPorte = numPorte;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", questo modello ha: " + getNumPorte() + " porte";
+    }
 }
