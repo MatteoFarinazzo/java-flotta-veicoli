@@ -6,11 +6,31 @@ public class GestoreFlotta {
 
     private List <Veicolo> listaVeicoli;
 
+    //costruttore
 
-     //metodi
+    public GestoreFlotta(List<Veicolo> listaVeicoli) {
+        this.listaVeicoli = listaVeicoli;
+    }
+
+    //getter setter
+
+    public List<Veicolo> getListaVeicoli() {
+        return listaVeicoli;
+    }
+
+    public void setListaVeicoli(List<Veicolo> listaVeicoli) {
+        this.listaVeicoli = listaVeicoli;
+    }
+
+
+    //metodi
 
     public void addNewVeicolo (Veicolo nuovoVeicolo){
-        listaVeicoli.add(nuovoVeicolo);
+        if (!listaVeicoli.contains(nuovoVeicolo.getTarga())){
+            listaVeicoli.add(nuovoVeicolo);
+        } else {
+            System.out.println("Hei! Un veicolo con questa targa è già presente!");
+        }
     }
 
     public Veicolo findVeicle (String targa){
