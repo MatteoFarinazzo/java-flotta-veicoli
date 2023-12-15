@@ -20,7 +20,7 @@ public class Main {
         flotta.addNewVeicolo(vekhb);
 
         //stampo un veicolo con specifica targa
-        System.out.println(flotta.findVeicle("AR946TE"));
+        System.out.println(flotta.findVeicle("HD648RT"));
 
         //conto il numero di veicoli distinti per tipologia
         System.out.println(flotta.getSpecificTypeNum());

@@ -5,10 +5,12 @@ import java.util.List;
 
 public class GestoreFlotta {
 
-    private List <Veicolo> listaVeicoli = new ArrayList<>();
+    private List <Veicolo> listaVeicoli;
 
     //costruttore
-
+    public GestoreFlotta() {
+        listaVeicoli = new ArrayList<>();
+    }
 
     //getter setter
 
@@ -44,9 +46,10 @@ public class GestoreFlotta {
         return finded;
     }
 
+    private int counterAuto = 0;
+    private int counterMoto = 0;
     public String getSpecificTypeNum (){
-        int counterAuto = 0;
-        int counterMoto = 0;
+
         String response = null;
         for (Veicolo veicolo : listaVeicoli){
             if(veicolo instanceof Automobile){

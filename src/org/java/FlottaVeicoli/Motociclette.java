@@ -19,8 +19,8 @@ public class Motociclette extends Veicolo{
     public String haveCavalletto (){
         String cavalle = null;
         if (cavalletto){
-            cavalle = " Ha il cavalletto";
-        } else {cavalle = " Non ha il cavalletto";}
+            cavalle = " ed ha il cavalletto";
+        } else {cavalle = " e non ha il cavalletto";}
         return cavalle;
     }
 

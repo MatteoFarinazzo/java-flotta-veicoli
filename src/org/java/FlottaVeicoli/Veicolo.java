@@ -7,9 +7,17 @@ public abstract class Veicolo {
 
     //costruttore
 
-    public Veicolo(String targa, int annoImmatricolazione) {
-        this.targa = targa;
-        this.annoImmatricolazione = annoImmatricolazione;
+    public Veicolo(String targa, int annoImmatricolazione)throws IllegalArgumentException{
+        if (targa.equals(null) || targa.isEmpty()){
+            new IllegalArgumentException("Devi inserire una targa valida");
+        } else{
+            this.targa = targa;
+        }
+        if (annoImmatricolazione == 0 ) {
+            new IllegalArgumentException("Devi inserire una data valida");
+        }else{
+            this.annoImmatricolazione = annoImmatricolazione;
+        }
     }
 
     //getter setter
@@ -37,6 +45,6 @@ public abstract class Veicolo {
 
     @Override
     public String toString() {
-        return "Il veicolo con la targa inserita è: " + getTarga() + " " + getAnnoImmatricolazione();
+        return "Il veicolo con la targa inserita è: " + getTarga() + " immatricolato nell'anno: " + getAnnoImmatricolazione();
     }
 }
